@@ -190,7 +190,7 @@ func DemoDoConnect(request *http.Request) (guac.Tunnel, error) {
 	}
 
 	sanitisedCfg := config
-	sanitisedCfg.Parameters["password"] = "********"
+	//sanitisedCfg.Parameters["password"] = "********"
 	logrus.Debugf("Starting handshake with %#v", sanitisedCfg)
 	err = stream.Handshake(config)
 	if err != nil {
